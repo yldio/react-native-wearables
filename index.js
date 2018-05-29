@@ -1,3 +1,3 @@
-import AppleHealthKit from 'rn-apple-healthkit';
+import Data from './data'
 
-export default AppleHealthKit
+export { Data }
