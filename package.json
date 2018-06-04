@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/yldio/react-native-wearables#readme",
   "peerDependencies": {
+    "react-native-google-fit": "^0.5.2",
     "rn-apple-healthkit": "^0.6.3"
   }
 }
