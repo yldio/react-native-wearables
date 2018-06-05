@@ -21,7 +21,7 @@ const Data = {
       .setTimeRange(+options.startDate, +options.endDate, TimeUnit.MILLISECONDS)
       .build();
 
-    return Fitness.History.readData(readRequest)
+    return Fitness.History.readData(readRequest).then(result => result.dataSets)
 
     // return new Promise((resolve, reject) => {
     //   funcMappings[dataType](options, (err, samples) => {
