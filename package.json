@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,12 @@
   },
   "homepage": "https://github.com/yldio/react-native-wearables#readme",
   "peerDependencies": {
-    "react-native-google-fit": "^0.5.2",
+    "react-native-google-fitness": "^0.2.0",
     "rn-apple-healthkit": "^0.6.3"
-  }
+  },
+  "devDependencies": {
+    "babel-preset-react-native-stage-0": "^1.0.1",
+    "jest": "^23.1.0"
+  },
+  "dependencies": {}
 }
