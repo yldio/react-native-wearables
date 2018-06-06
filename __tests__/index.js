@@ -2,15 +2,34 @@ import DataAndroid from "../data.android";
 import DataIOS from "../data.ios";
 import { DATA_TYPES, ERRORS } from "../constants";
 
+/*
+This test file tests the identical behaviour of the iOS and Android implementations in all code paths
+*/
+
+import DataIOSImplementation from "rn-apple-healthkit";
+import DataAndroidImplementation from "react-native-google-fitness";
+
+/*
+The implementations are mocked because they are native modules that can only be run in an iOS / Android simulator
+
+The mock for each implementation is a mirror of the subset of the original module which is used in react-native-wearables
+
+- `jest.fn()` mock functions are used to mock any function used
+- `jest.fn()` mock functions with a protoitype are used to mock any class used
+- `Symbol()` symbols are used to mock any unique constant used
+*/
+
 jest.mock(
   "react-native-google-fitness",
   () => {
     const mock = {
+      // default export
       requestPermissions: jest.fn(),
       History: {
         readData: jest.fn()
       },
 
+      // named exports
       DataReadRequest: {
         Builder: jest.fn()
       },
@@ -44,9 +63,11 @@ jest.mock(
 jest.mock(
   "rn-apple-healthkit",
   () => ({
+    // default export
     initHealthKit: jest.fn(),
     getHeartRateSamples: jest.fn(),
 
+    // named exports
     Constants: {
       Permissions: {
         HeartRate: Symbol()
@@ -75,10 +96,7 @@ const EXPECTED_SAMPLES = [
 ];
 
 const IOS_IMPLEMENTATION_SAMPLES = EXPECTED_SAMPLES;
-const ANDROID_IMPLEMENTATION_SAMPLES = EXPECTED_SAMPLES; // this is wrong
-
-import DataIOSImplementation from "rn-apple-healthkit";
-import DataAndroidImplementation from "react-native-google-fitness";
+const ANDROID_IMPLEMENTATION_SAMPLES = EXPECTED_SAMPLES; // TODO: this is wrong
 
 describe("Data", () => {
   describe("on iOS", () => {
