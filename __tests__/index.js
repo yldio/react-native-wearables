@@ -15,7 +15,7 @@ The implementations are mocked because they are native modules that can only be 
 The mock for each implementation is a mirror of the subset of the original module which is used in react-native-wearables
 
 - `jest.fn()` mock functions are used to mock any function used
-- `jest.fn()` mock functions with a protoitype are used to mock any class used
+- `jest.fn()` mock functions with a prototype are used to mock any class used
 - `Symbol()` symbols are used to mock any unique constant used
 */
 
