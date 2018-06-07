@@ -77,6 +77,17 @@ A promise which resolves when and if the user granted the requested permission t
 
 Retrieves data samples from HealthKit on iOS and Google Fitness on Android. Will fail if called before `Data.authorize` has been called with success.
 
+##### Example
+
+```js
+import { Data } from "react-native-wearables";
+
+Data.read(Data.Types.heartRateBpm, {
+  startDate: new Date("2018-05-01"),
+  endDate: new Date("2018-05-09")
+});
+```
+
 ##### Arguments
 
 * `dataType`, a data type, found in `Data.Types`
