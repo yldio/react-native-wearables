@@ -104,7 +104,7 @@ describe("Data", () => {
       expect(DataIOS.Types).toBe(DATA_TYPES);
     });
 
-    it("authorize returns a promise", async () => {
+    it("Data.authorize returns a promise", async () => {
       DataIOSImplementation.initHealthKit.mockImplementationOnce(
         (types, cb) => {
           expect(types).toEqual({
@@ -132,7 +132,7 @@ describe("Data", () => {
       ).rejects.toThrow(new Error(ERRORS.failedInit));
     });
 
-    it("read returns samples", async () => {
+    it("Data.read returns samples", async () => {
       const startDate = new Date("2018-05-01");
       const endDate = new Date("2018-05-10");
 
@@ -172,7 +172,7 @@ describe("Data", () => {
       expect(DataAndroid.Types).toBe(DATA_TYPES);
     });
 
-    it("authorize returns a promise", async () => {
+    it("Data.authorize returns a promise", async () => {
       DataAndroidImplementation.requestPermissions.mockImplementationOnce(
         options => {
           expect(
@@ -205,7 +205,7 @@ describe("Data", () => {
       ).rejects.toThrow(new Error(ERRORS.failedInit));
     });
 
-    it("read returns samples", async () => {
+    it("Data.read returns samples", async () => {
       const startDate = new Date("2018-05-01");
       const endDate = new Date("2018-05-10");
 
