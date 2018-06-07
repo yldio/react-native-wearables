@@ -85,7 +85,9 @@ import { Data } from "react-native-wearables";
 Data.read(Data.Types.heartRateBpm, {
   startDate: new Date("2018-05-01"),
   endDate: new Date("2018-05-09")
-});
+})
+  .then(samples => console.log(samples))
+  .catch(() => console.log("failed"));
 ```
 
 ##### Arguments
