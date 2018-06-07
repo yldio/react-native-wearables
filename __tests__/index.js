@@ -3,7 +3,8 @@ import DataIOS from "../data.ios";
 import { DATA_TYPES, ERRORS } from "../constants";
 
 /*
-This test file tests the identical behaviour of the iOS and Android implementations in all code paths
+This module requires two different adapters, one for iOS, another for Android, which are two separate implementations of the same interface and behaviours.
+This test file tests the identical behaviour of the iOS and Android implementations in all code paths.
 */
 
 import DataIOSImplementation from "rn-apple-healthkit";
