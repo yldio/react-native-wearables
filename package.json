@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage",
-    "precommit": "prettier *.js --write && npm run test"
+    "lint": "prettier *.js --write",
+    "precommit": "npm run lint && npm run test"
   },
   "repository": {
     "type": "git",
@@ -27,5 +28,15 @@
     "husky": "^0.14.3",
     "jest": "^23.1.0",
     "prettier": "^1.13.4"
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 0
+      }
+    }
   }
 }
