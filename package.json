@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage",
+    "precommit": "prettier *.js && npm run test"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,8 @@
   },
   "devDependencies": {
     "babel-preset-react-native-stage-0": "^1.0.1",
-    "jest": "^23.1.0"
-  },
-  "dependencies": {}
+    "husky": "^0.14.3",
+    "jest": "^23.1.0",
+    "prettier": "^1.13.4"
+  }
 }
