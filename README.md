@@ -21,7 +21,7 @@ Go to [yldio/react-native-wearables-demo](https://github.com/yldio/react-native-
 
 ## Data
 
-`Data` is a common interface to the health and fitness data system repositories on iOS and Android, respective HealthKit and Google Fitness.
+`Data` is a common interface to the health and fitness data system repositories on iOS and Android, respectively HealthKit and Google Fitness.
 
 It lets you write code like this which works on both iOS and Android.
 
@@ -49,7 +49,7 @@ This project builds on the great work of existing iOS- and Android-specific Reac
 
 An object of constants representing each of the data types supported by the module.
 
-* `Data.Types.heartRateBpm`, heart rate samples, unit is BPM (beats per minute)
+- `Data.Types.heartRateBpm`, heart rate samples, unit is BPM (beats per minute)
 
 #### `Data.authorize(dataTypes)`
 
@@ -67,7 +67,7 @@ Data.authorize([Data.Types.heartRateBpm])
 
 ##### Arguments
 
-* `dataTypes`, an array of data types constants, found in `Data.Types`.
+- `dataTypes`, an array of data types constants, found in `Data.Types`.
 
 ##### Returns
 
@@ -92,16 +92,16 @@ Data.read(Data.Types.heartRateBpm, {
 
 ##### Arguments
 
-* `dataType`, a data type, found in `Data.Types`
-* `options`, an object of options - `startDate`, a `Date` instance - `endDate`, a `Date` instance
+- `dataType`, a data type, found in `Data.Types`
+- `options`, an object of options - `startDate`, a `Date` instance - `endDate`, a `Date` instance
 
 ##### Returns
 
 An array of data points, where
 
-* `value` is a number
-* `startDate` is a Date ISO string
-* `endDate` is a Date ISO string
+- `value` is a number
+- `startDate` is a Date ISO string
+- `endDate` is a Date ISO string
 
 ```js
 [
