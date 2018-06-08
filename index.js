@@ -1,3 +1,3 @@
-import Data from './data'
+import Data from "./data";
 
-export { Data }
+export { Data };

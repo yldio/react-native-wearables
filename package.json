@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage",
-    "precommit": "prettier *.js && npm run test"
+    "precommit": "prettier *.js --write && npm run test"
   },
   "repository": {
     "type": "git",

@@ -1,8 +1,8 @@
 export const DATA_TYPES = {
-  heartRateBpm: 'heartRateBpm'
-}
+  heartRateBpm: "heartRateBpm"
+};
 
 export const ERRORS = {
   failedInit: "failedInit",
   failedQuery: "failedQuery"
-}
+};
