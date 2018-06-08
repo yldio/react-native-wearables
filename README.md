@@ -4,7 +4,7 @@ A React Native module with a common interface for interacting with wearables on 
 
 ### Getting started
 
-* Browse to your `react-native-app`. (see [Demo](#demo-app) for a ready made example)
+* Browse to your `react-native` app. (see [Demo](#demo-app) for a ready made example)
 
 * Install react-native-wearables.
 `npm install react-native-wearables`
