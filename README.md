@@ -4,18 +4,18 @@ A React Native module with a common interface for interacting with wearables on 
 
 ### Getting started
 
-Browse to your `react-native-app`. (see [Demo](#demo-app) for a ready made example)
+* Browse to your `react-native-app`. (see [Demo](#demo-app) for a ready made example)
 
-Install react-native-wearables.
+* Install react-native-wearables.
 `npm install react-native-wearables`
 
-Install the peer dependencies.
+* Install the peer dependencies.
 `npm install rn-apple-healthkit react-native-google-fitness`
 
-Link the native modules.
+* Link the native modules.
 `react-native link`
 
-Edit `android/app/src/main/java/.../MainApplication.java`. The line that looks like `new GoogleFitPackage()` should be changed to `new GoogleFitPackage(BuildConfig.APPLICATION_ID)`. __(this is a temporary fix to a known react-native limitation)__
+* Edit `android/app/src/main/java/.../MainApplication.java`. The line that looks like `new GoogleFitPackage()` should be changed to `new GoogleFitPackage(BuildConfig.APPLICATION_ID)`. _(this is a temporary fix to a known react-native limitation)_
 
 ### Demo app
 
