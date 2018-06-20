@@ -17,6 +17,17 @@ A React Native module with a common interface for interacting with wearables on 
 
 * Edit `android/app/src/main/java/.../MainApplication.java`. The line that looks like `new GoogleFitPackage()` should be changed to `new GoogleFitPackage(BuildConfig.APPLICATION_ID)`. _(this is a temporary fix to a known react-native limitation)_
 
+* Add the following lines to ios/<name of your app>/Info.plist – these are what iOS shows your users when requesting access to HealthKit data.
+
+```
+<key>NSHealthShareUsageDescription</key>
+<string>Read and understand health data.</string>
+<key>NSHealthUpdateUsageDescription</key>
+<string>Share workout data with other apps.</string>
+```
+
+* Enable HealthKit in your iOS app's Capabilities in Xcode.
+
 ### Demo app
 
 Go to [yldio/react-native-wearables-demo](https://github.com/yldio/react-native-wearables-demo) to check out a super simple demo app that runs on both iOS and Android.
