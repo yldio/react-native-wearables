@@ -28,6 +28,8 @@ A React Native module with a common interface for interacting with wearables on 
 
 * Enable HealthKit in your iOS app's Capabilities in Xcode.
 
+![Xcode Capabilities HealthKit](https://user-images.githubusercontent.com/56902/41662490-2dd69e6a-7499-11e8-8989-560d94683b61.png)
+
 ### Demo app
 
 Go to [yldio/react-native-wearables-demo](https://github.com/yldio/react-native-wearables-demo) to check out a super simple demo app that runs on both iOS and Android.
